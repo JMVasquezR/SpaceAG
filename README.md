@@ -14,6 +14,3 @@ python3 manage.py makemigrations
 python3 manage.py migrate
 ```
 
-## ¡LISTO ME DEBES UNAS CERVEZAS! ##
-
-## ¡BORRA ESTO! ##
