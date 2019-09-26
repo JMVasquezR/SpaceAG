@@ -1,0 +1,21 @@
+{% extends 'base/base.html' %}
+{% load staticfiles %}
+
+{% block css %}
+{#    <link href="{% static 'encuesta.css' %}" rel="stylesheet">#}
+{% endblock %}
+
+{% block js %}
+{% endblock %}
+
+{% block content %}
+
+    <div class="col-sm-12 block" id="block_detalle">
+        <div class="col-sm-12 text-justify">
+            <h2 class="text-light  mt-2">Bienvenido</h2>
+            <label class="text-light ">{{ user.first_name }} {{ user.last_name }}</label>
+
+        </div>
+
+    </div>
+{% endblock %}

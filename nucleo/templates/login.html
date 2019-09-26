@@ -1,0 +1,31 @@
+{% extends 'base/base.html' %}
+{% load staticfiles %}
+
+{% block css %}
+    <link href="{% static 'login.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <form class="form-signin mt-5" method="post" role="form" id="">
+        <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+        <div class="ml-2 mr-2">
+            <h1 class=" tittle-sesion text-justify">Inicia Sesión</h1>
+            {% if form.non_field_errors %}
+                <div class="non-field-errors">
+                    {% for err in form.non_field_errors %}
+                        <p class="form-error mb-0">{{ err }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            <label class="float-left mt-2">Usuario</label>
+            {{ form.username.error }}
+            {{ form.username }}
+            <label class="float-left mt-3">Contraseña</label>
+            {{ form.password.error }}
+            {{ form.password }}
+
+            <button class="btn btn-lg btn-primary btn-block mb-4 mt-5 btn-login" type="submit">Ingresar</button>
+        </div>
+
+    </form>
+{% endblock %}
