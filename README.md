@@ -13,4 +13,4 @@ docker exec -it spacead-app sh
 python3 manage.py makemigrations
 python3 manage.py migrate
 ```
-
+ 
